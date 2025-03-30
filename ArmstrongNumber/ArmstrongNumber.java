@@ -15,8 +15,24 @@ public class ArmstrongNumber
             digitCount++;
             tempNumber = tempNumber/10;
         }
+        
+        tempNumber = number;
+        int powerSum = 0, r=0;
 
-        System.out.println(digitCount);
+        while(tempNumber > 0){
+            r = tempNumber % 10;
+            tempNumber = tempNumber/10;
+            int sum = 1;
+            for(int i=0; i<digitCount; i++){
+                sum = sum*r;
+            }
+            powerSum+=sum;
+        }
+
+        if(number == powerSum) System.out.print("The number "+number+" is Armstrong Number");
+        else System.out.print("The number "+number+" is not Armstrong number");
+
+
 
     }
 }
