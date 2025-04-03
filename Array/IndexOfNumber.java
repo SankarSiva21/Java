@@ -17,5 +17,14 @@ public class IndexOfNumber
 
         System.out.print("Enter the number to get index: ");
         int target = sc.nextInt(); 
+
+        int result = index(target,number);
+
+        if(result == -1) System.out.print("The isn't in the array");
+        else System.out.print("The number is int at the index of "+ result);
+    }
+    static int index(int target, int[] numbers){
+        for(int i=0; i<numbers.lenght; i++) if(numbers[i] == target) return i;
+        return -1;
     }
 }
