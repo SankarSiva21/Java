@@ -24,7 +24,7 @@ public class IndexOfNumber
         else System.out.print("The number is int at the index of "+ result);
     }
     static int index(int target, int[] numbers){
-        for(int i=0; i<numbers.lenght; i++) if(numbers[i] == target) return i;
+        for(int i=0; i<numbers.length; i++) if(numbers[i] == target) return i;
         return -1;
     }
 }
