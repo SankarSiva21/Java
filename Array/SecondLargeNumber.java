@@ -14,12 +14,15 @@ public class SecondLargeNumber{
         for(int i = 0; i < length; i++){
             numbers[i] = sc.nextInt();
         }
+        if(numbers.length == 0){
+            System.out.print("The array has no values to get second large number");
+            return;
+        } 
         System.out.print(secondLargeNumber(numbers));
     }
     static int secondLargeNumber(int[] numbers){
         int large = Integer.MIN_VALUE;
         int secondLarge = Integer.MIN_VALUE;
-        if(numbers.length == 0) return;
         for(int i=0; i<numbers.length; i++){
             int num = numbers[i];
             if(num > large){
